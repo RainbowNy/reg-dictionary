@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS regions(
+  id          INTEGER AUTO_INCREMENT PRIMARY KEY,
+  name        LONGTEXT NOT NULL,
+  shortName   LONGTEXT NOT NULL
+);
