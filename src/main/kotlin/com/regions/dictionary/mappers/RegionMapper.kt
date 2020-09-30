@@ -2,6 +2,7 @@ package com.regions.dictionary.mappers
 
 import com.regions.dictionary.domain.Region
 import org.apache.ibatis.annotations.*
+import org.springframework.cache.annotation.Cacheable
 
 @Mapper
 interface RegionMapper {
@@ -23,5 +24,5 @@ interface RegionMapper {
     fun updateRegionInDictionary(region: Region)
 
     @Delete("DELETE FROM REGIONS WHERE id = #{id}")
-    fun deleteRegionFromDictionaryById(@Param("id") regionToDelete: Region)
+    fun deleteRegionFromDictionaryById(@Param("id") idRegionToDelete: Long)
 }
