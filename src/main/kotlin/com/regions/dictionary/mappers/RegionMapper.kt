@@ -17,7 +17,7 @@ interface RegionMapper {
     @Select("SELECT * FROM REGIONS WHERE id = #{id}")
     fun selectRegionById(@Param("id") id: Long) : Region
 
-    @Insert("INSERT INTO REGIONS(name, shortName) VALUE (#{name}, #{shortName})")
+    @Insert("INSERT INTO REGIONS(name, shortName) VALUES (#{name}, #{shortName})")
     fun insertRegionToDictionary(region: Region)
 
     @Update("UPDATE REGIONS SET name = #{name}, shortName = #{shortName} WHERE id = #{id}")
